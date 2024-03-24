@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'Portfolio_React',
 
   projectId: 'f26ecsn2',
-  dataset: 'projects',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 
