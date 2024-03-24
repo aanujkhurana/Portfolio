@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import './About.scss';
   
 const About = () => {
-  
+
   const [abouts, setAbouts] = useState([]);
 
   return (
     <>
     <h2 className='head-text'>
-      I Know That 
-      <span>Good Design</span>
+      I know 
+      <span>Good Code</span>
       <br />
       Means
       <span>Good Business</span>
