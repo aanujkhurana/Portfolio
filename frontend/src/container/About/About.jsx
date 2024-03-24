@@ -11,13 +11,13 @@ const About = () => {
     <>
     <h2 className='head-text'>
       I know 
-      <span>Good Code</span>
+      <span> Good Code</span>
       <br />
       Means
-      <span>Good Business</span>
+      <span> Good Business</span>
     </h2>
 
-    <div className='app_profiles'>
+    <div className='app__profiles'>
       {abouts.map((about, index) => (
         <motion.div
           whileInView={{ opacity: 1 }}
