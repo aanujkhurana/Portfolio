@@ -14,6 +14,7 @@ const SocialMedia = () => (
         <FaFacebook />
       </div>
     </div>
+    
   );
   
   export default SocialMedia;
