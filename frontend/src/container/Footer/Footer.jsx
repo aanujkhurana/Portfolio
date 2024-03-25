@@ -19,7 +19,7 @@ const Footer = () => {
         </address>
         <motion.div className='footer__action'>
         <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Email Me</a>
-        <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Download Resume</a>
+        <a className="footer__btn" href="https://raw.githubusercontent.com/aanujkhurana/Portfolio/master/frontend/src/assets/resume/AanujResume.pdf">Download Resume</a>
         </motion.div>
       </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="legal">
           <p>&copy; 2024 aanujkhurana. All rights reserved.</p>
           <div className="legal__links">
-            <span>Made with <span className="heart">♥</span> remotely from Anywhere</span>
+            <span>Made with <span className="heart">♥</span> remotely from anywhere</span>
           </div>
         </div>
       </motion.div>
