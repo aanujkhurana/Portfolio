@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
-  return (
+    return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
             <img src={images.logo} alt='logo' />
@@ -32,7 +32,7 @@ const Navbar = () => {
                 >
                 <HiX onClick={() => setToggle(false)} />
                 <ul>
-                    {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                    {['home', 'about', 'work', 'skills'].map((item) => (
                     <li key={item}>
                         <a href={`#${item}`} onClick={() => setToggle(false)}>
                         {item}
