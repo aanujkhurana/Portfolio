@@ -21,6 +21,7 @@ import swift from '../assets/swift.png';
 import htmlbundle from '../assets/htmlbundle.png';
 import php from '../assets/php.png';
 import rstudio from '../assets/rstudio.png';
+import docker from '../assets/docker.png';
 
 
 import about01 from '../assets/about01.png';
@@ -48,6 +49,7 @@ export default {
   graphql,
   html,
   javascript,
+  docker,
   node,
   swift,
   python,

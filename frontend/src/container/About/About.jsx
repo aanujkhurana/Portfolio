@@ -31,7 +31,7 @@ const About = () => {
     </h2>
 
     <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {abouts.sort((b,a) => a._updatedAt.localeCompare(b._updatedAt)).map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
