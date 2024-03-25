@@ -27,11 +27,11 @@ const Skills = () => {
 
   return (
     <>
-    <h2 className='head-text'>Skills & Experience</h2>
+    <h2 className='head-text'>Skills & <span>Experience</span></h2>
     <div className='app__skills-container'>
 
       <motion.div className='app__skills-list'>
-        {skills.map((skill)=>(
+        {skills.sort((a,b) => a.name.localeCompare(b.name)).map((skill)=>(
           <motion.div
             whileInView={{opacity: [0, 1]}}
             transition={{duration: 0.5}}
@@ -47,7 +47,7 @@ const Skills = () => {
       </motion.div>
 
       <div className="app__skills-exp">
-          {experiences.map((experience) => (
+          {experiences.sort((b,a) => a.year.localeCompare(b.year)).map((experience) => (
             <motion.div
               key={experience.year}
               className="app__skills-exp-item"

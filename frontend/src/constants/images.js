@@ -10,7 +10,6 @@ import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
 import javascript from '../assets/javascript.png';
-import mu5 from '../assets/mu5.png';
 import node from '../assets/node.png';
 import python from '../assets/python.png';
 import react from '../assets/react.png';
@@ -18,6 +17,11 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import swift from '../assets/swift.png';
+import htmlbundle from '../assets/htmlbundle.png';
+import php from '../assets/php.png';
+import rstudio from '../assets/rstudio.png';
+
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -34,15 +38,18 @@ export default {
   mobile,
   api,
   cpp,
+  rstudio,
   css,
+  htmlbundle,
+  php,
   figma,
   flutter,
   git,
   graphql,
   html,
   javascript,
-  mu5,
   node,
+  swift,
   python,
   react,
   redux,
