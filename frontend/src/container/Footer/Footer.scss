@@ -1,46 +1,42 @@
-:root {
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
-}
-
 .footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   padding: 1rem;
   color: var(--black-color);
-  background-color: var(--white-color);
+  background-color: var(--primary-color);
   border-top: 1px solid var(--lightGray-color);
 
-  > * {
-    flex: 1 100%;
-  }
-
   &__addr {
-    margin-right: 1.25em;
-    margin-bottom: 2em;
-  }
+    margin-bottom: 2rem;
+    margin-left: 1rem;
 
-  &__logo {
-    font-family: 'Pacifico', cursive;
-    font-weight: 400;
-    text-transform: lowercase;
-    font-size: 1.5rem;
+    img {
+      width: 90px;
+      height: 20px;
+      margin-top: 1rem;
+  
+      @media screen and (min-width: 2000px) {
+        width: 180px;
+        height: 40px;
+      }
+    }
   }
 
   h2 {
-    margin-top: 1.3em;
-    font-size: 15px;
+    margin-top: 1.2em;
+    font-size: 14px;
     font-weight: 400;
   }
 
   address {
     font-style: normal;
     color: var(--gray-color);
+
+  }
+  .footer__action{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 
     .footer__btn {
       display: flex;
@@ -49,36 +45,17 @@
       text-decoration: none;
       height: 36px;
       max-width: max-content;
-      background-color: rgba(33, 33, 33, 0.07);
+      background-color: var(--gray-color);
       border-radius: 100px;
-      color: var(--black-color);
+      color: var(--white-color);
       line-height: 0;
       margin: 0.6em 0;
       font-size: 1rem;
-      padding: 0 1.3em;
-
+      padding: 1.3em;
+  
       &:hover {
         background-color: var(--secondary-color);
-        color: var(--white-color);
       }
-    }
-  }
-
-  @media screen and (min-width: 40.375em) {
-    &__nav > * {
-      flex: 1;
-    }
-
-    .nav__item--extra {
-      flex-grow: 2;
-    }
-
-    &__addr {
-      flex: 1 0px;
-    }
-
-    &__nav {
-      flex: 2 0px;
     }
   }
 }
@@ -87,11 +64,24 @@
   display: flex;
   flex-wrap: wrap;
   color: var(--gray-color);
+  margin-left: 1rem;
+
+  p{
+    font-size: 1rem;
+    margin: 0;
+  
+  }
 
   &__links {
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-right: 1rem;
+
+    span{
+      font-size: 1rem;
+      margin: 0;
+    }
 
     .heart {
       color: var(--secondary-color);

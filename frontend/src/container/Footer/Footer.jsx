@@ -12,12 +12,15 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <h1 className="footer__logo">Anuj Khurana</h1>
-        <h2>Contact</h2>
+        <img src={images.logo} alt='logo' />
+        <h2>Find me at</h2>
         <address>
-          Brisbane, Queensland. Australia. 4214<br />
-          <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Email Me</a>
+          Brisbane, Queensland. Australia. 4214
         </address>
+        <motion.div className='footer__action'>
+        <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Email Me</a>
+        <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Download Resume</a>
+        </motion.div>
       </div>
 
       <motion.div
