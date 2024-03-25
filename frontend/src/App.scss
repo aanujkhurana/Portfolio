@@ -119,6 +119,12 @@
       align-items: center;
   
       transition: all 0.3s ease-in-out;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
   
       svg {
         width: 20px;
