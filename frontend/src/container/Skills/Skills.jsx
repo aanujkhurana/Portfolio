@@ -58,7 +58,7 @@ const Skills = () => {
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
-                  <>
+                  <div key={work.name}>
                     <motion.div
                       key={work.name}
                       data-tooltip-id={work.name}
@@ -72,7 +72,7 @@ const Skills = () => {
                     <Tooltip id={work.name} className="skills-tooltip">
                       {work.desc}
                     </Tooltip>
-                  </>
+                  </div>
                 ))}
               </motion.div>
             </motion.div>
