@@ -70,7 +70,7 @@ const Contact = () => {
       <div className="app__contact-cards">
         <motion.div
           whileHover={{ scale: 1.2 }}
-          transition={{ duration: 0.5, type: 'tween' }}
+          transition={{ duration: 0.2, type: 'tween' }}
           className="app__contact-card"
         >
           <img src={images.email} alt="email" />
@@ -78,7 +78,7 @@ const Contact = () => {
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.2 }}
-          transition={{ duration: 0.5, type: 'tween' }}
+          transition={{ duration: 0.2, type: 'tween' }}
           className="app__contact-card"
         >
           <img src={images.mobile} alt="phone" />

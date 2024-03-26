@@ -42,8 +42,8 @@
     transition: all 0.3s ease-in-out;
   
     div {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background-color: #f7f7f7;
   
@@ -51,10 +51,7 @@
         width: 50%;
         height: 50%;
       }
-  
-      &:hover {
-        box-shadow: 0 0 25px #f2f7fb;
-      }
+
   
       @media screen and (min-width: 2000px) {
         width: 150px;

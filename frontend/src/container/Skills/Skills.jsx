@@ -33,8 +33,8 @@ const Skills = () => {
       <motion.div className='app__skills-list'>
         {skills.sort((a,b) => a.name.localeCompare(b.name)).map((skill)=>(
           <motion.div
-            whileHover={{scale: 1.1}}
-            transition={{duration: 0.5, type: 'tween'}}
+            whileHover={{scale: 1.2}}
+            transition={{duration: 0.1, type: 'tween'}}
             whileInView={{opacity: [0, 1]}}
             className='app__skills-item app__flex'
             key={skill.name}
