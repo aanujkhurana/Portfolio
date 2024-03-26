@@ -13,8 +13,9 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({}); // State to store input validation errors
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -22,11 +23,35 @@ const Contact = () => {
   };
 
   const handleSubmit = () => {
+    // Clear previous errors
+    setErrors({});
+
+    // Perform input validation
+    const validationErrors = {};
+    if (!name.trim()) {
+      validationErrors.name = 'Name is required';
+    }
+    if (!email.trim()) {
+      validationErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      validationErrors.email = 'Invalid email format';
+    }
+    if (!message.trim()) {
+      validationErrors.message = 'Message is required';
+    }
+
+    // If there are validation errors, set them and return
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     setLoading(true);
 
+    // Submit form data
     const contact = {
       _type: 'contact',
-      name: formData.username,
+      name: formData.name,
       email: formData.email,
       message: formData.message,
     };
@@ -60,13 +85,20 @@ const Contact = () => {
           <a href="tel:+61 (481) 25-0988" className="p-text">(+61)  48-125-0988</a>
         </motion.div>
       </div>
+      
       {!isFormSubmitted ? (
         <div className="app__contact-form app__flex">
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+            <input className="p-text" type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
+          </div>
+          <div>
+            {errors.name && <span className="form-error">{errors.name}</span> }
           </div>
           <div className="app__flex">
             <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+          </div>
+          <div>
+            {errors.email && <span className="form-error">{errors.email}</span> }
           </div>
           <div>
             <textarea
@@ -77,12 +109,16 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
+          <div>
+            {errors.message && <span className="form-error">{errors.message}</span>}
+          </div>
           <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
-      ) : (
+      ) : 
+      (
         <div>
           <h3 className="head-text">
-            Thank you for getting in touch!
+            <span>Thank you!</span> for getting in touch.
           </h3>
         </div>
       )}

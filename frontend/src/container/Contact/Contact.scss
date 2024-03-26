@@ -45,7 +45,7 @@
         font-weight: 500;
       }
       &:hover {
-        box-shadow: 0 0 25px var(--white-color);
+        box-shadow: 0 0 25px var(--lightGray-color);
         color: var(----black-color);
       }
   
@@ -64,7 +64,7 @@
   }
   
   .app__contact-cards .app__contact-card:last-child:hover {
-    box-shadow: 0 0 25px var(--white-color);
+    box-shadow: 0 0 25px var(--lightGray-color);
     color: var(----black-color);
   }
   
@@ -75,7 +75,7 @@
   
     div {
       width: 100%;
-      
+      display: flex;
       margin: 0.75rem 0;
       border-radius: 10px;
       cursor: pointer;
@@ -124,9 +124,15 @@
         background-color: var(--secondary-color);
       }
     }
+
+    .form-error {
+      color: red;
+      font-size: 1rem;
+    }
   
     @media screen and (max-width: 768px) {
       width: 100%;
       margin: 1rem 0;
     }
+
   }
