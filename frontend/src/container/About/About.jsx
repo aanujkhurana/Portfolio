@@ -24,7 +24,7 @@ const About = () => {
     <>
     <h2 className='head-text'>
       I know 
-      <span> Good Code</span>
+      <span> Good Code </span>
       <br />
       Means
       <span> Good Business</span>
@@ -35,7 +35,7 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
+            transition={{ duration: 1, type: 'tween' }}
             className="app__profile-item"
             key={about.title + index}
           >
