@@ -24,8 +24,8 @@ const Footer = () => {
       </div>
 
       <motion.div
-        whileInView={{ x: [300, 0] }}
-        transition={{ duration: 0.35, ease: 'easeOut' }}
+        whileInView={{ scale: [0.75, 1] }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         >
         <div className="legal">
           <p>&copy; 2024 aanujkhurana. All rights reserved.</p>
