@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const SocialMedia = () => (
   <motion.div 
     className="app__social app__flex"
-    whileInView={{ scale: [0.5, 1] }}
-    transition={{ duration: 0.25, ease: 'easeIn' }}
+    whileInView={{ scale: [0.85,1] }}
+    transition={{ duration: 1, type: 'tween' }}
   >
     <div>
       <a href="https://github.com/aanujkhurana" target="_blank" rel="noreferrer">
