@@ -108,6 +108,11 @@
     border-radius: 0.5rem;
     opacity: 0;
     transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
   
     div {
       width: 50px;
@@ -115,6 +120,7 @@
       border-radius: 50%;
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
+
   
       margin: 1rem;
       font-family: var(--font-base);
