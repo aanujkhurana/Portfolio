@@ -32,6 +32,7 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import logoFooter from '../assets/logoFooter.png';
 
 
 export default {
@@ -65,4 +66,5 @@ export default {
   profile,
   circle,
   logo,
+  logoFooter,
 };

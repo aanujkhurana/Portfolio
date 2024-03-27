@@ -107,11 +107,11 @@
     padding: 1rem;
   
     div {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background-color: var(--white-color);
-      margin: 0.25rem 0;
+      margin: 0.25rem 0.25rem;
       border: 1px solid var(--lightGray-color);
   
       display: flex;
@@ -127,8 +127,8 @@
       }
   
       svg {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
         color: var(--gray-color);
       }
   

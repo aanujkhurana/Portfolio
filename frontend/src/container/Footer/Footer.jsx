@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <img src={images.logo} alt='logo' />
+        <img src={images.logoFooter} alt='logo' />
         <h2>Find me at</h2>
         <address>
           Somewhere in; Gold Coast, Australia
@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="legal">
           <p>&copy; 2024 aanujkhurana. All rights reserved.</p>
           <div className="legal__links">
-            <span>Made with <span>♥</span> remotely from anywhere</span>
+            <span>Made with <span className='heart'>♥</span> remotely from anywhere</span>
           </div>
         </div>
       </motion.div>

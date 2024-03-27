@@ -23,6 +23,11 @@
     img {
       width: 90px;
       height: 20px;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+      }
   
       @media screen and (min-width: 2000px) {
         width: 180px;
