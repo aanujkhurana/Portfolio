@@ -15,7 +15,7 @@ const Footer = () => {
         <img src={images.logo} alt='logo' />
         <h2>Find me at</h2>
         <address>
-          Brisbane, Queensland. Australia. 4214
+          Somewhere in; Gold Coast, Australia
         </address>
         <motion.div className='footer__action'>
         <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Email Me</a>
@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="legal">
           <p>&copy; 2024 aanujkhurana. All rights reserved.</p>
           <div className="legal__links">
-            <span>Made with <span className="heart">♥</span> remotely from anywhere</span>
+            <span>Made with <span>♥</span> remotely from anywhere</span>
           </div>
         </div>
       </motion.div>
