@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-
 import { images } from '../../constants'
 import { motion } from 'framer-motion';
-
-import { AppWrap, MotionWrap } from '../../wrapper';
 
 import './Footer.scss'
 
 const Footer = () => {
-  const [toggle, setToggle] = useState(false)
   return (
     <footer className="footer">
       <div className="footer__addr">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
@@ -17,6 +17,7 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const workPortfolioRef = useRef(null);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -36,6 +37,17 @@ const Work = () => {
     }, 500);
   };
 
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    scrollToWorkPortfolio();
+  };
+
+  const scrollToWorkPortfolio = () => {
+    if (workPortfolioRef.current) {
+      workPortfolioRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Calculate total number of pages
   const totalPages = Math.ceil(filterWork.length / PAGE_SIZE);
 
@@ -51,7 +63,7 @@ const Work = () => {
         My Creative <span>Portfolio</span>
       </h2>
 
-      <div className="app__work-filter">
+      <div className="app__work-filter" ref={workPortfolioRef}>
         {['Web App', 'Mobile App', 'Desktop App', 'Design', 'Other', 'All'].map(
           (item, index) => (
             <div
@@ -120,18 +132,17 @@ const Work = () => {
 
       {/* Pagination Controls */}
       <div className="app__work-btns app__flex">
-        <div className='app__flex'
+        <div className={`${currentPage === 1 ? 'disabled app__flex' : ''} app__flex`}
           disabled={currentPage === 1}
-          onClick={() => setCurrentPage(currentPage - 1)}
+          onClick={() => handlePageChange(currentPage - 1)}
         >
           <HiChevronLeft />
         </div>
 
         <span>{`${currentPage} of ${totalPages}`}</span>
 
-        <div className='app__flex'
-          disabled={currentPage === totalPages}
-          onClick={() => setCurrentPage(currentPage + 1)}
+        <div className={`${currentPage === totalPages || totalPages === 0 ? 'disabled app__flex' : ''} app__flex`}
+          onClick={() => handlePageChange(currentPage + 1)}
           >
           <HiChevronRight />
         </div>

@@ -164,6 +164,13 @@
   .app__work-btns {
     flex-direction: row;
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    .disabled{
+      opacity: 0.3;
+      pointer-events: none;
+    }
 
     span {
       color: var(--gray-color);
