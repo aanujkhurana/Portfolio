@@ -35,7 +35,7 @@ import logo from '../assets/logo.png';
 import logoFooter from '../assets/logoFooter.png';
 
 
-export default {
+const images = {
   email,
   mobile,
   api,
@@ -68,3 +68,5 @@ export default {
   logo,
   logoFooter,
 };
+
+export default images;
