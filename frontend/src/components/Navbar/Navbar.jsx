@@ -1,9 +1,11 @@
 import { useState } from 'react';
+
 import './Navbar.scss'
 
 import { images } from '../../constants'
 
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -40,6 +42,9 @@ const Navbar = () => {
                     </li>
                     ))}
                 </ul>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
                 </motion.div>
             )}
         </div>
