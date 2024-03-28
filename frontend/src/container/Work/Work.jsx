@@ -9,8 +9,6 @@ import { urlFor, client } from '../../client';
 
 import './Work.scss';
 
-const PAGE_SIZE = 6; // Number of works per page
-
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
