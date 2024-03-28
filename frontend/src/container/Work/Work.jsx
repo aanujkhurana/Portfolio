@@ -17,6 +17,7 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(6); // Number of works per page
   const workPortfolioRef = useRef(null);
 
   useEffect(() => {
@@ -30,6 +31,32 @@ const Work = () => {
     client.fetch(filterQuery).then((filterData) => {
       setFilterWork(filterData);
     });
+  }, []);
+
+   // Update pageSize based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 2000){
+        setPageSize(8);
+      }
+      else if (window.innerWidth >= 850) {
+        setPageSize(6);
+      }
+      else if (window.innerWidth >= 450) {
+        setPageSize(4); 
+      } 
+      else {
+        setPageSize(3);
+      }
+    };
+
+    handleResize(); // Initial call to set initial pageSize
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   
 
@@ -55,12 +82,12 @@ const Work = () => {
   };
 
   // Calculate total number of pages
-  const totalPages = Math.ceil(filterWork.length / PAGE_SIZE);
+  const totalPages = Math.ceil(filterWork.length / pageSize);
 
   // Slice works to display for current page
   const slicedWorks = filterWork.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
   );
 
   return (
