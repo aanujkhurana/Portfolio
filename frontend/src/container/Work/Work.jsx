@@ -20,12 +20,18 @@ const Work = () => {
   const workPortfolioRef = useRef(null);
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
-    client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
+    const worksQuery = '*[_type == "works"] | order(_updatedAt desc)';
+    const filterQuery = '*[_type == "works" && "All" in tags] | order(_updatedAt desc)';
+    
+    client.fetch(worksQuery).then((worksData) => {
+      setWorks(worksData);
+    });
+  
+    client.fetch(filterQuery).then((filterData) => {
+      setFilterWork(filterData);
     });
   }, []);
+  
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -82,7 +88,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {slicedWorks.sort((a, b) => a._updatedAt.localeCompare(b._updatedAt)).map((work, index) => (
+        {slicedWorks.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt={work.name} />
