@@ -14,7 +14,7 @@ const Skills = () => {
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const skillsQuery = '*[_type == "skills"] | order(bgColor)';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
@@ -31,7 +31,7 @@ const Skills = () => {
     <div className='app__skills-container'>
 
       <motion.div className='app__skills-list'>
-        {skills.sort((a,b) => a.name.localeCompare(b.name)).map((skill)=>(
+        {skills.map((skill)=>(
           <motion.div
             whileHover={{scale: 1.2}}
             transition={{duration: 0.1, type: 'tween'}}
@@ -39,7 +39,7 @@ const Skills = () => {
             className='app__skills-item app__flex'
             key={skill.name}
           >
-            <div className='app__flex' style={{ backgroundColor: skill.bgColor }}>
+            <div className='app__flex'>
               <img src={urlFor(skill.icon)} alt={skill.name} />
             </div>
             <p className='p-text'>{skill.name}</p>
