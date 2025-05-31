@@ -17,8 +17,7 @@ const Footer = () => {
             Somewhere in; Gold Coast, Australia
           </address>
           <div className='footer__action'>
-          <a className="footer__btn" href="mailto:aanujkhurana@gmail.com">Email Me</a>
-          <a className="footer__btn" href="https://raw.githubusercontent.com/aanujkhurana/Portfolio/master/frontend/src/assets/resume/AanujResume.pdf">Download Resume</a>
+          <a className="footer__btn" href="https://raw.githubusercontent.com/aanujkhurana/Portfolio/master/frontend/src/assets/resume/AnujKhurana_CV.pdf">Download Resume</a>
           </div>
         </div>
 

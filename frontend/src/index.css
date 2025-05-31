@@ -13,6 +13,19 @@
 }
 
 
+:root--dark {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #1a1b1c;
+  --secondary-color: #0b57d0;
+  --black-color: #f0f9ff;
+  --lightGray-color: #def3ff;
+  --gray-color: #c8d5e9;
+  --brown-color: #46364a;
+  --white-color: #202124;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -66,7 +66,7 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & <span>chat with me</span></h2>
+      <h2 className="head-text">chat with <span> me</span></h2>
       <div className="app__contact-cards">
         <motion.div
           whileHover={{ scale: 1.2 }}
