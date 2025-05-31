@@ -23,11 +23,8 @@ const About = () => {
   return (
     <>
     <h2 className='head-text'>
-      I know 
-      <span> Good Code </span>
-      <br />
-      Means
-      <span> Good Business</span>
+      About  
+      <span> Me </span>
     </h2>
 
     <div className="app__profiles">

@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div className="legal">
-          <p>&copy; 2024 aanujkhurana. All rights reserved.</p>
+          <p>&copy; 2025 aanujkhurana. All rights reserved.</p>
           <div className="legal__links">
             <span>Made with <span className='heart'>♥</span> remotely from anywhere.</span>
           </div>
